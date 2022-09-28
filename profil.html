@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MY PROFILE</title>
+</head>
+<body>
+  <img src="assests/profil.jpg" alt="dingin banget" width="250">
+  <br><br>
+  <audio controls>
+    <source src="assests/music.mp3" type="audio/mpeg" />
+  </audio>
+  <br><br>
+  <div style="text-align: center;">
+    <button onclick="play_pause()">Play/Pause</button>
+    <button onclick="besar()">BIG</button>
+    <button onclick="kecil()">SMALL</button>
+    <button onclick="normal()">NORMAL</button>
+    <br><br>
+    <video id="video" width="500">
+      <source src="assests/video.mp4" type="video/mp4">
+    </video>
+  </div>
+  
+ <script>
+  let video = document.getElementById("video");
+
+  function play_pause() {
+    if(video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  }
+  function besar() {
+    video.width = 560;
+  }
+  function kecil() {
+    video.width = 320;
+  }
+  function normal() {
+    video.width = 430;
+  }
+</script> 
+</body>
+</html>
